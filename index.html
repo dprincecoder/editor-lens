@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Image Editor</title>
+  </head>
+  <body>
+    <div class="container disable">
+      <h2>
+        Editor Lens
+        <span
+          class="boxicons bi-info-circle"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="This is a tool to edit images. You can edit the image by adding text, adding a border, adding a watermark, and more."
+        >
+          <img
+            style="width: 30px; border-radius: 20px"
+            src="https://icon-library.com/images/camera-lens-icon-png/camera-lens-icon-png-7.jpg"
+            alt=""
+        /></span>
+      </h2>
+      <div class="wrapper">
+        <div class="editor-panel">
+          <div class="filter">
+            <label class="title">Filters</label>
+            <div class="options">
+              <button id="brightness" class="active">Brightness</button>
+              <button id="saturation">Saturation</button>
+              <button id="inversion">Inversion</button>
+              <button id="grayscale">Grayscales</button>
+              <button id="blur">Blur</button>
+              <button id="contrast">Contrast</button>
+            </div>
+            <div class="slider">
+              <div class="filter-info">
+                <p class="name">Brightness</p>
+                <p class="value">100%</p>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="200"
+                value="100"
+                class="slider-input"
+              />
+            </div>
+          </div>
+          <div class="rotate">
+            <label class="title">Rotate & Flip</label>
+            <div class="options">
+              <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+              <button id="right">
+                <i class="fa-solid fa-rotate-right"></i>
+              </button>
+              <button id="vertical">
+                <i class="bx bx-reflect-vertical"></i>
+              </button>
+              <button id="horizontal">
+                <i class="bx bx-reflect-horizontal"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="preview-img">
+          <img
+            src="https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="
+            alt="image-placehoder"
+          />
+        </div>
+      </div>
+      <div class="controls">
+        <button class="reset-filter">Reset Filters</button>
+        <div class="row">
+          <input
+            type="file"
+            class="file-input"
+            accept="img,jpg,png,jpeg,image/*"
+            hidden
+          />
+          <button class="choose-img">Choose Image</button>
+          <button class="save-img">Save Image</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
