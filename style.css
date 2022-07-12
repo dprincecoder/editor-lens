@@ -173,6 +173,18 @@ button:hover {
   background-color: #5372f0;
 }
 
+footer {
+  padding: 1rem;
+}
+
+footer b {
+  color: red;
+}
+
+footer small {
+  color: #037fff;
+}
+
 /* responsive */
 @media screen and (max-width: 760px) {
   .container {
