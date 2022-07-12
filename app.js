@@ -90,7 +90,7 @@ sliderValue.addEventListener("input", () => {
       contrast = sliderValue.value;
       break;
     case "blur":
-      blur = sliderValue.value /  30;
+      blur = sliderValue.value / 30;
       break;
     default:
       grayscale = sliderValue.value;
@@ -137,6 +137,8 @@ resetFiltersBtn.addEventListener("click", () => {
   brightness = 100;
   saturation = 100;
   inversion = 0;
+  contrast = 100;
+  blur = 0;
   grayscale = 0;
 
   rotate = 0;
